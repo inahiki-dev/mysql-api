@@ -11,19 +11,19 @@ A library implemented from the "builder" pattern classes for working with [MySQL
 ## Installation
 Add the library to your `Maven` or `Gradle` project: 
 
-### Maven `disabled`
+### Maven
 ```xml
 <dependency>
-  <groupId>com.github.inahiki-dev</groupId>
+  <groupId>io.github.inahiki-dev</groupId>
   <artifactId>mysql-api</artifactId>
   <version>1.3.0</version>
 </dependency>
 ```
 
-### Gradle `disabled`
+### Gradle
 ```Gradle
 dependencies {  
-   implementation 'com.github.inahiki-dev:mysql-api:1.3.0'
+   implementation 'io.github.inahiki-dev:mysql-api:1.3.0'
 }
 ```
 
