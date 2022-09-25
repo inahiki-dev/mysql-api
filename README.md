@@ -97,7 +97,7 @@ SELECT Players.name AS name, Clan.tag AS tag, Clan.lvl AS lvl
 ```
 Implementation in Java:
 ```java
-connection.select()
+ResultSet set = connection.select()
         .column("Players.name", "name")
         .column("Clan.tag", "tag")
         .column("Clan.lvl", "lvl")
@@ -105,6 +105,7 @@ connection.select()
         .innerJoin("Clan", "id", "Players", "clan_id")
         .where().greaterEqual("lvl", 5).and().less("lvl", 10).add()
         .limit(5)
+        .executeQuery();
 ```
 ### REPLACE INTO / INSERT INTO
 Request for MySQL:

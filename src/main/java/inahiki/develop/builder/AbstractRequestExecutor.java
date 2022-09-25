@@ -3,6 +3,8 @@ package inahiki.develop.builder;
 import inahiki.develop.connection.SQLConnection;
 import inahiki.develop.exception.SQLCException;
 
+import java.sql.ResultSet;
+
 public abstract class AbstractRequestExecutor {
 
     private final SQLConnection connection;
@@ -24,13 +26,11 @@ public abstract class AbstractRequestExecutor {
     }
 
     public void execute() throws SQLCException {
-        executeAsString();
+        connection.execute(toSQLLine());
     }
 
-    public String executeAsString() throws SQLCException {
-        String request = toSQLLine();
-        getConnection().execute(request);
-        return request;
+    public ResultSet executeQuery() throws SQLCException {
+        return connection.executeQuery(toSQLLine());
     }
 
     @Override

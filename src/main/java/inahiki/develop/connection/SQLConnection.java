@@ -60,6 +60,10 @@ public class SQLConnection {
         return URL;
     }
 
+    public boolean isClosed() throws SQLException {
+        return connection == null || connection.isClosed();
+    }
+
     public void open() throws SQLCException {
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
