@@ -96,7 +96,7 @@ public class SQLConnection {
             try {
                 statement.execute(request);
             } catch (Exception e) {
-                if (e.getClass().getName().equals("CommunicationsException")) {
+                if (e.getClass().getSimpleName().equals("CommunicationsException")) {
                     reconnect();
                     execute(request);
                 } else {
@@ -113,7 +113,7 @@ public class SQLConnection {
             try {
                 return statement.executeQuery(request);
             } catch (Exception e) {
-                if (e.getClass().getName().equals("CommunicationsException")) {
+                if (e.getClass().getSimpleName().equals("CommunicationsException")) {
                     reconnect();
                     return executeQuery(request);
                 }
