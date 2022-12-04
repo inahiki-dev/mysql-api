@@ -16,14 +16,14 @@ Add the library to your `Maven` or `Gradle` project:
 <dependency>
   <groupId>io.github.inahiki-dev</groupId>
   <artifactId>mysql-api</artifactId>
-  <version>1.3.1</version>
+  <version>1.3.2</version>
 </dependency>
 ```
 
 ### Gradle
 ```Gradle
 dependencies {  
-   implementation 'io.github.inahiki-dev:mysql-api:1.3.1'
+   implementation 'io.github.inahiki-dev:mysql-api:1.3.2'
 }
 ```
 
